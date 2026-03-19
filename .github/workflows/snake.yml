@@ -1,4 +1,4 @@
-name: Generate Pacman
+name: Generate Snake
 
 on:
   schedule:
@@ -8,15 +8,15 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: buluma/github-action-pacman@v1
+      - uses: Platane/snk@v3
         with:
           github_user_name: celtekli-dev
           outputs: |
-            dist/pacman.svg
-            dist/pacman-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
 
       - uses: crazy-max/ghaction-github-pages@v3
         with:
