@@ -25,13 +25,13 @@
 
 ---
 
-## 🐍 Contribution Snake
+## 🕹️ Pacman Contribution Graph
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/celtekli-dev/celtekli-dev/output/github-contribution-grid-snake-dark.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/celtekli-dev/celtekli-dev/output/github-contribution-grid-snake.svg"/>
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/celtekli-dev/celtekli-dev/output/github-contribution-grid-snake.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/celtekli-dev/celtekli-dev/output/pacman-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/celtekli-dev/celtekli-dev/output/pacman.svg"/>
+    <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/celtekli-dev/celtekli-dev/output/pacman.svg"/>
   </picture>
 </div>
 
