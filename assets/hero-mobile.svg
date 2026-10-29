@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 830" width="600" height="830" role="img" aria-labelledby="m-t m-d">
+<title id="m-t">Cinderhash — Nazım Çeltekli</title>
+<desc id="m-d">Cinderhash: Software · Security · Marketing. Automate your work. Focus on growth. Terminal: whoami → Nazım Çeltekli · Cinderhash; role → Network &amp; Security; focus → TCP/IP, ARP, MITM research, Scapy, Nmap. An animated network of hexagon nodes with packets flowing between them.</desc>
+<style>
+text{font-kerning:normal}
+.sans{font-family:Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif}
+.mono{font-family:ui-monospace, 'Geist Mono', SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace}
+.fx{transform-box:fill-box;transform-origin:center}
+.pk,.ring,.cur,.cover{opacity:0}
+@keyframes enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes appear{from{opacity:0}to{opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(8deg)}}
+@keyframes breathe{0%,100%{opacity:.65;transform:scale(1)}50%{opacity:1;transform:scale(1.07)}}
+@keyframes ring{0%{opacity:.75;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.85)}}
+@keyframes packet{0%{stroke-dashoffset:5}55%,100%{stroke-dashoffset:-100}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes drift{to{transform:translate(48.5px,84px)}}
+@keyframes cursor{0%,99%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+.enter{animation:enter .7s cubic-bezier(.16,1,.3,1) both}
+.float{animation:float 11s ease-in-out infinite}
+.breathe{animation:breathe 8s ease-in-out infinite}
+.drift{animation:drift 36s linear infinite}
+.pk{opacity:1;animation:packet 3s linear infinite}
+.ring{animation:ring 3.2s ease-out infinite}
+.row0{animation:appear .01s linear 0.7s both}
+.cov0{opacity:1;animation:type0 0.45s steps(6,end) 1.05s both}
+@keyframes type0{from{transform:translateX(0)}to{transform:translateX(64.8px)}}
+.cur0{animation:type0 0.45s steps(6,end) 1.05s both,cursor 1.05s linear 0.7s forwards}
+.out0{animation:appear .15s ease-out 1.75s both}
+.row1{animation:appear .01s linear 2.1s both}
+.cov1{opacity:1;animation:type1 0.6s steps(8,end) 2.45s both}
+@keyframes type1{from{transform:translateX(0)}to{transform:translateX(86.4px)}}
+.cur1{animation:type1 0.6s steps(8,end) 2.45s both,cursor 1.2s linear 2.1s forwards}
+.out1{animation:appear .15s ease-out 3.3s both}
+.row2{animation:appear .01s linear 3.65s both}
+.cov2{opacity:1;animation:type2 0.68s steps(9,end) 4s both}
+@keyframes type2{from{transform:translateX(0)}to{transform:translateX(97.2px)}}
+.cur2{animation:type2 0.68s steps(9,end) 4s both,cursor 1.27s linear 3.65s forwards}
+.out2{animation:appear .15s ease-out 4.93s both}
+.last{animation:appear .01s linear 5.28s both}
+.blink{animation:blink 1.1s step-end 5.28s infinite}
+}
+</style>
+<defs>
+<linearGradient id="m-ember" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff6a1a"/><stop offset="1" stop-color="#ffb347"/></linearGradient>
+<radialGradient id="m-glow"><stop offset="0" stop-color="#ff6a1a" stop-opacity=".22"/><stop offset=".55" stop-color="#ff6a1a" stop-opacity=".06"/><stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/></radialGradient>
+<radialGradient id="m-fade" cx=".5" cy=".42" r=".62"><stop offset=".25" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<pattern id="m-grid" width="48.5" height="84" patternUnits="userSpaceOnUse"><path d="M24.25 0L48.5 14L48.5 42L24.25 56L0 42L0 14ZM24.25 56L24.25 84" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/></pattern>
+<mask id="m-mask"><rect width="600" height="830" fill="url(#m-fade)"/></mask>
+<clipPath id="m-clip"><rect width="600" height="830" rx="22"/></clipPath>
+</defs>
+<rect width="600" height="830" rx="22" fill="#08080b"/>
+<g clip-path="url(#m-clip)"><g mask="url(#m-mask)"><g class="drift"><rect x="-48.5" y="-84" width="696.99" height="998" fill="url(#m-grid)"/></g></g><circle class="fx breathe" cx="300" cy="400" r="230" fill="url(#m-glow)"/><path class="fx float" style="animation-duration:12s;animation-delay:-2s" d="M540 54L553.86 62L553.86 78L540 86L526.14 78L526.14 62Z" fill="#ff6a1a" fill-opacity="0.08" stroke="#ff6a1a" stroke-opacity=".4" stroke-width="1"/><path class="fx float" style="animation-duration:10s;animation-delay:-5s" d="M560 290L568.66 295L568.66 305L560 310L551.34 305L551.34 295Z" fill="#ff6a1a" fill-opacity="0.05" stroke="#ff6a1a" stroke-opacity=".4" stroke-width="1"/><path class="fx float" style="animation-duration:13s;animation-delay:-7s" d="M44 508L54.39 514L54.39 526L44 532L33.61 526L33.61 514Z" fill="#ff6a1a" fill-opacity="0.08" stroke="#ff6a1a" stroke-opacity=".4" stroke-width="1"/><path class="fx float" style="animation-duration:9s;animation-delay:-3s" d="M470 511L477.79 515.5L477.79 524.5L470 529L462.21 524.5L462.21 515.5Z" fill="#ff6a1a" fill-opacity="0.05" stroke="#ff6a1a" stroke-opacity=".4" stroke-width="1"/></g>
+<rect x=".5" y=".5" width="599" height="829" rx="21.5" fill="none" stroke="rgba(255,255,255,0.14)"/>
+<g class="enter" style="animation-delay:.05s">
+<path transform="translate(32 40) scale(0.02072)" fill="#f4f4f5" fill-rule="evenodd" d="M795 1L0 488L1 1718L794 2219L1254 1954L1254 1411L790 1670L451 1463L440 754L794 541L794 913L1251 637L1254 261ZM1473 153L1470 173L1457 790L1197 790L791 1027L790 1543L1254 1285L1480 1285L1480 2063L1921 1798L1921 417Z"/>
+<text class="sans" x="87.2" y="74.04" font-size="29.9" font-weight="600" letter-spacing="-.03em" fill="#f4f4f5">Cinderhash</text>
+</g>
+<g class="enter" style="animation-delay:.15s">
+<rect x="32" y="113.6" width="346.47" height="32.2" rx="16.1" fill="#ff6a1a" fill-opacity=".08" stroke="#ff6a1a" stroke-opacity=".35"/>
+<text class="mono" x="46.95" y="134.88" font-size="13.8" textLength="316.57" lengthAdjust="spacing" fill="#ffb347">SOFTWARE · SECURITY · MARKETING</text>
+</g>
+<g class="enter" style="animation-delay:.25s">
+<text class="sans" x="30" y="210" font-size="48" font-weight="600" letter-spacing="-.04em" fill="#f4f4f5">Automate your work.</text>
+<text class="sans" x="30" y="264.72" font-size="48" font-weight="600" letter-spacing="-.04em" fill="url(#m-ember)">Focus on growth.</text>
+</g>
+<g class="enter" style="animation-delay:.45s"><g fill="none"><path d="M300 412L218.8 340.88" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M300 412L381.2 335.28" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M300 412L401.92 432.72" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M300 412L343.68 504.4" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M300 412L239.52 492.08" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M300 412L186.88 415.92" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M218.8 340.88L186.88 415.92" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M218.8 340.88L381.2 335.28" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M381.2 335.28L401.92 432.72" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M401.92 432.72L343.68 504.4" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M343.68 504.4L239.52 492.08" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/><path d="M239.52 492.08L186.88 415.92" stroke="rgba(255,255,255,0.11)" stroke-width="1.25"/></g>
+<g fill="none"><path class="pk" pathLength="100" d="M300 412L218.8 340.88" stroke="#ff6a1a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:2.6s;animation-delay:-0s"/><path class="pk" pathLength="100" d="M300 412L381.2 335.28" stroke="#ffb347" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.05s;animation-delay:-0.37s;animation-direction:reverse"/><path class="pk" pathLength="100" d="M300 412L401.92 432.72" stroke="#ff6a1a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.5s;animation-delay:-0.74s"/><path class="pk" pathLength="100" d="M300 412L343.68 504.4" stroke="#ffb347" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.95s;animation-delay:-1.11s"/><path class="pk" pathLength="100" d="M300 412L239.52 492.08" stroke="#ff6a1a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:2.6s;animation-delay:-1.48s;animation-direction:reverse"/><path class="pk" pathLength="100" d="M300 412L186.88 415.92" stroke="#ffb347" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.05s;animation-delay:-1.85s"/><path class="pk" pathLength="100" d="M218.8 340.88L186.88 415.92" stroke="#ff6a1a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.5s;animation-delay:-2.22s"/><path class="pk" pathLength="100" d="M218.8 340.88L381.2 335.28" stroke="#ffb347" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.95s;animation-delay:-2.59s;animation-direction:reverse"/><path class="pk" pathLength="100" d="M381.2 335.28L401.92 432.72" stroke="#ff6a1a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:2.6s;animation-delay:-0.36s"/><path class="pk" pathLength="100" d="M401.92 432.72L343.68 504.4" stroke="#ffb347" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.05s;animation-delay:-0.28s"/><path class="pk" pathLength="100" d="M343.68 504.4L239.52 492.08" stroke="#ff6a1a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.5s;animation-delay:-0.2s;animation-direction:reverse"/><path class="pk" pathLength="100" d="M239.52 492.08L186.88 415.92" stroke="#ffb347" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 200" style="animation-duration:3.95s;animation-delay:-0.12s"/></g>
+<path class="fx ring" style="animation-delay:0s" d="M300 391.84L317.46 401.92L317.46 422.08L300 432.16L282.54 422.08L282.54 401.92Z" fill="none" stroke="#ff6a1a" stroke-width="1.25"/><path d="M300 391.84L317.46 401.92L317.46 422.08L300 432.16L282.54 422.08L282.54 401.92Z" fill="#101016" stroke="url(#m-ember)" stroke-opacity="1" stroke-width="2"/><path transform="translate(291.1 401.72) scale(0.00926)" fill="#f4f4f5" fill-rule="evenodd" d="M795 1L0 488L1 1718L794 2219L1254 1954L1254 1411L790 1670L451 1463L440 754L794 541L794 913L1251 637L1254 261ZM1473 153L1470 173L1457 790L1197 790L791 1027L790 1543L1254 1285L1480 1285L1480 2063L1921 1798L1921 417Z"/>
+<path class="fx ring" style="animation-delay:0.45s" d="M218.8 329.68L228.5 335.28L228.5 346.48L218.8 352.08L209.1 346.48L209.1 335.28Z" fill="none" stroke="#ff6a1a" stroke-width="1.25"/><path d="M218.8 329.68L228.5 335.28L228.5 346.48L218.8 352.08L209.1 346.48L209.1 335.28Z" fill="#101016" stroke="#ff6a1a" stroke-opacity="0.6" stroke-width="1.25"/><path d="M218.8 337.07L222.1 338.98L222.1 342.78L218.8 344.69L215.5 342.78L215.5 338.98Z" fill="#ff6a1a" fill-opacity=".85"/><text class="mono" x="218.8" y="324.08" font-size="9.9" letter-spacing=".12em" text-anchor="middle" fill="#9a9aa6">TCP/IP</text>
+<path class="fx ring" style="animation-delay:0.9s" d="M381.2 325.2L389.93 330.24L389.93 340.32L381.2 345.36L372.47 340.32L372.47 330.24Z" fill="none" stroke="#ff6a1a" stroke-width="1.25"/><path d="M381.2 325.2L389.93 330.24L389.93 340.32L381.2 345.36L372.47 340.32L372.47 330.24Z" fill="#101016" stroke="#ff6a1a" stroke-opacity="0.6" stroke-width="1.25"/><path d="M381.2 331.85L384.17 333.57L384.17 336.99L381.2 338.71L378.23 336.99L378.23 333.57Z" fill="#ff6a1a" fill-opacity=".85"/><text class="mono" x="381.2" y="319.6" font-size="9.9" letter-spacing=".12em" text-anchor="middle" fill="#9a9aa6">ARP</text>
+<path class="fx ring" style="animation-delay:1.35s" d="M401.92 421.52L411.62 427.12L411.62 438.32L401.92 443.92L392.22 438.32L392.22 427.12Z" fill="none" stroke="#ff6a1a" stroke-width="1.25"/><path d="M401.92 421.52L411.62 427.12L411.62 438.32L401.92 443.92L392.22 438.32L392.22 427.12Z" fill="#101016" stroke="#ff6a1a" stroke-opacity="0.6" stroke-width="1.25"/><path d="M401.92 428.91L405.22 430.82L405.22 434.62L401.92 436.53L398.62 434.62L398.62 430.82Z" fill="#ff6a1a" fill-opacity=".85"/><text class="mono" x="401.92" y="455.12" font-size="9.9" letter-spacing=".12em" text-anchor="middle" fill="#9a9aa6">SCAPY</text>
+<path class="fx ring" style="animation-delay:1.8s" d="M343.68 494.32L352.41 499.36L352.41 509.44L343.68 514.48L334.95 509.44L334.95 499.36Z" fill="none" stroke="#ff6a1a" stroke-width="1.25"/><path d="M343.68 494.32L352.41 499.36L352.41 509.44L343.68 514.48L334.95 509.44L334.95 499.36Z" fill="#101016" stroke="#ff6a1a" stroke-opacity="0.6" stroke-width="1.25"/><path d="M343.68 500.97L346.65 502.69L346.65 506.11L343.68 507.83L340.71 506.11L340.71 502.69Z" fill="#ff6a1a" fill-opacity=".85"/><text class="mono" x="343.68" y="525.68" font-size="9.9" letter-spacing=".12em" text-anchor="middle" fill="#9a9aa6">NMAP</text>
+<path class="fx ring" style="animation-delay:2.25s" d="M239.52 482L248.25 487.04L248.25 497.12L239.52 502.16L230.79 497.12L230.79 487.04Z" fill="none" stroke="#ff6a1a" stroke-width="1.25"/><path d="M239.52 482L248.25 487.04L248.25 497.12L239.52 502.16L230.79 497.12L230.79 487.04Z" fill="#101016" stroke="#ff6a1a" stroke-opacity="0.6" stroke-width="1.25"/><path d="M239.52 488.65L242.49 490.37L242.49 493.79L239.52 495.51L236.55 493.79L236.55 490.37Z" fill="#ff6a1a" fill-opacity=".85"/><text class="mono" x="239.52" y="513.36" font-size="9.9" letter-spacing=".12em" text-anchor="middle" fill="#9a9aa6">PYTHON</text>
+<path class="fx ring" style="animation-delay:2.7s" d="M186.88 406.96L194.64 411.44L194.64 420.4L186.88 424.88L179.12 420.4L179.12 411.44Z" fill="none" stroke="#ff6a1a" stroke-width="1.25"/><path d="M186.88 406.96L194.64 411.44L194.64 420.4L186.88 424.88L179.12 420.4L179.12 411.44Z" fill="#101016" stroke="#ff6a1a" stroke-opacity="0.6" stroke-width="1.25"/><path d="M186.88 412.87L189.52 414.4L189.52 417.44L186.88 418.97L184.24 417.44L184.24 414.4Z" fill="#ff6a1a" fill-opacity=".85"/><text class="mono" x="186.88" y="436.08" font-size="9.9" letter-spacing=".12em" text-anchor="middle" fill="#9a9aa6">C/C++</text></g>
+<g class="enter" style="animation-delay:.35s"><rect x="30" y="562" width="540" height="239.6" rx="12" fill="#0c0c11" stroke="rgba(255,255,255,0.14)"/>
+<path d="M30 598H570" stroke="rgba(255,255,255,0.08)"/><circle cx="51.6" cy="580" r="5.4" fill="#ff6a1a"/><circle cx="70.8" cy="580" r="5.4" fill="#2a2a33"/><circle cx="90" cy="580" r="5.4" fill="#2a2a33"/>
+<text class="mono" x="548.4" y="584.8" font-size="13.2" text-anchor="end" fill="#9a9aa6">nazim@cinderhash: ~</text>
+<g class="row0"><text class="mono" x="51.6" y="635.8" font-size="18" fill="#ff6a1a">$</text>
+<text class="mono" x="73.2" y="635.8" font-size="18" textLength="64.8" lengthAdjust="spacing" fill="#f4f4f5">whoami</text>
+<rect class="cover cov0" x="73.2" y="617.8" width="66.8" height="23.4" fill="#0c0c11"/>
+<rect class="cur cur0" x="73.2" y="621.04" width="10.8" height="18.9" fill="#ff6a1a"/></g>
+<text class="mono out0" x="51.6" y="661.8" font-size="18" textLength="291.6" lengthAdjust="spacing"><tspan fill="#f4f4f5">Nazım Çeltekli</tspan><tspan fill="#9a9aa6"> · </tspan><tspan fill="#ffb347">Cinderhash</tspan></text>
+<g class="row1"><text class="mono" x="51.6" y="687.8" font-size="18" fill="#ff6a1a">$</text>
+<text class="mono" x="73.2" y="687.8" font-size="18" textLength="86.4" lengthAdjust="spacing" fill="#f4f4f5">cat role</text>
+<rect class="cover cov1" x="73.2" y="669.8" width="88.4" height="23.4" fill="#0c0c11"/>
+<rect class="cur cur1" x="73.2" y="673.04" width="10.8" height="18.9" fill="#ff6a1a"/></g>
+<text class="mono out1" x="51.6" y="713.8" font-size="18" textLength="453.6" lengthAdjust="spacing"><tspan fill="#f4f4f5">Network &amp; Security</tspan><tspan fill="#9a9aa6"> · </tspan><tspan fill="#c9c9d1">software · automation</tspan></text>
+<g class="row2"><text class="mono" x="51.6" y="739.8" font-size="18" fill="#ff6a1a">$</text>
+<text class="mono" x="73.2" y="739.8" font-size="18" textLength="97.2" lengthAdjust="spacing" fill="#f4f4f5">cat focus</text>
+<rect class="cover cov2" x="73.2" y="721.8" width="99.2" height="23.4" fill="#0c0c11"/>
+<rect class="cur cur2" x="73.2" y="725.04" width="10.8" height="18.9" fill="#ff6a1a"/></g>
+<text class="mono out2" x="51.6" y="765.8" font-size="18" textLength="464.4" lengthAdjust="spacing"><tspan fill="#c9c9d1">TCP/IP · ARP · MITM research · Scapy · Nmap</tspan></text>
+<g class="last"><text class="mono" x="51.6" y="791.8" font-size="18" fill="#ff6a1a">$</text>
+<rect class="blink" x="73.2" y="777.04" width="10.8" height="18.9" fill="#ff6a1a"/></g></g>
+</svg>
