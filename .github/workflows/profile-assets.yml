@@ -1,0 +1,137 @@
+# Generates the activity images for the profile README and publishes them to the `output` branch.
+# Each generator runs in its own job with a read-only token; only `publish` can write, and it runs no third-party code.
+# Third-party actions are pinned to full commit SHAs (version in the trailing comment).
+#
+# Token: the default GITHUB_TOKEN is enough for public data. To count private repositories in the stats cards,
+# add a fine-grained PAT as the `PROFILE_STATS_TOKEN` repository secret (see README notes); it is picked up automatically.
+#
+# Note: GitHub disables scheduled workflows in public repositories after 60 days without repository activity.
+# Any commit to this repository resets that; if it happens, re-enable with Actions -> Profile assets -> Enable workflow
+# (or `gh workflow enable profile-assets.yml`). No keepalive bot is used on purpose.
+name: Profile assets
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # daily, 06:17 Europe/Istanbul
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/profile-assets.yml"
+      - ".github/profile-3d.json"
+
+permissions: {}
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?color_snake=#ff6a1a&color_dots=#1c1c24,#5c2a0e,#9c3f0c,#e0590f,#ffb347
+            dist/snake-light.svg?color_snake=#ff6a1a&color_dots=#ececef,#ffd8b8,#ffb07a,#ff8a3d,#e0560a
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: snake
+          path: dist
+          if-no-files-found: error
+          retention-days: 1
+
+  contrib3d:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: .github/profile-3d.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: contrib3d
+          path: profile-3d-contrib/profile-3d-*.svg
+          if-no-files-found: error
+          retention-days: 1
+
+  cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Generate dark cards
+        uses: vn7n24fzkq/github-profile-summary-cards@7022eb6bd48de38b092f54110a8ff8185f2ac4a1 # v0.13.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          AUTO_PUSH: false
+          THEME: github_dark
+          ANIMATION: rise
+          TIME_ZONE: Europe/Istanbul
+      - name: Keep dark set
+        run: mkdir -p dist && mv profile-summary-card-output/github_dark dist/dark
+      - name: Generate light cards
+        uses: vn7n24fzkq/github-profile-summary-cards@7022eb6bd48de38b092f54110a8ff8185f2ac4a1 # v0.13.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          AUTO_PUSH: false
+          THEME: github
+          ANIMATION: rise
+          TIME_ZONE: Europe/Istanbul
+      # The action has no custom-colour input: swap the theme colours for the Cinderhash palette.
+      # github_dark: title, text, background, stroke, icon, chart. github: title, text+icon, stroke, chart.
+      - name: Apply Cinderhash palette
+        run: |
+          mv profile-summary-card-output/github dist/light
+          find dist -type f ! -name '*.svg' -delete
+          sed -i -e 's/#0366d6/#ffb347/gI' -e 's/#77909c/#c9c9d1/gI' -e 's/#0d1117/#08080b/gI' \
+                 -e 's/#2e343b/#26262f/gI' -e 's/#8b949e/#ff6a1a/gI' -e 's/#40c463/#ff6a1a/gI' dist/dark/*.svg
+          sed -i -e 's/#0366d6/#c2410c/gI' -e 's/#586069/#3f3f46/gI' -e 's/#e4e2e2/#e4e4e7/gI' \
+                 -e 's/#40c463/#ff6a1a/gI' dist/light/*.svg
+          ls -la dist/dark dist/light
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cards
+          path: dist
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    needs: [snake, contrib3d, cards]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          path: output
+      - name: Publish to the output branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        working-directory: output
+        run: |
+          find . -type f | sort
+          git init -q -b output
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Update profile assets"
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          git -c http.https://github.com/.extraheader="$auth" push -q --force "https://github.com/${GITHUB_REPOSITORY}.git" output
